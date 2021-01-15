@@ -1,25 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { Grid, Button } from '@material-ui/core';
+import { CSVLink } from 'react-csv';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+const App = () => {
+	const csvData = [
+		['firstname', 'lastname', 'email'],
+		['Ahmed', 'Tomi', 'ah@smthing.co.com'],
+		['Raed', 'Labes', 'rl@smthing.co.com'],
+		['Yezzi', 'Min l3b', 'ymin@cocococo.com'],
+	];
+
+	return (
+		<Grid container direction="column" justify="center" alignItems="center">
+			<CSVLink
+				data={csvData}
+				filename={'my-file.csv'}
+				target="_blank"
+				style={{ margin: '2vh 0vw', textDecoration: 'none', outline: 'none' }}
+			>
+				<Button variant="contained" color="primary">
+					{' '}Download CSV
+				</Button>
+			</CSVLink>
+		</Grid>
+	);
+};
 
 export default App;
