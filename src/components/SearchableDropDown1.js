@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
-export const SearchableDropDown = () => {
+export const SearchableDropDown1 = () => {
     const [inputValue, setInputValue] = useState('');
     const [searchText, setSearchText]=useState('');
     const [dropdownOptions, setDropdownOptions]=useState(['audi','mercedes','bmw','maserati','ambassador']);

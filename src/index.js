@@ -5,10 +5,12 @@ import reportWebVitals from './components/reportWebVitals';
 import {FetchGitHubRepo} from './components/FetchGitHubRepo';
 import {Aggrid} from './components/Aggrid'
 import {OuterContainer} from './components/MaterialUISample/OuterContainer'
-import {SearchableDropDown} from './components/SearchableDropDown';
+import {SearchableDropDown1} from './components/SearchableDropDown1';
+import {SearchableDropDown2} from './components/SearchableDropDown2';
+
 ReactDOM.render(
   <React.StrictMode>
-    <SearchableDropDown />
+    <SearchableDropDown2 />
   </React.StrictMode>,
   document.getElementById('root')
 );
