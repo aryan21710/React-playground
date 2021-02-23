@@ -1,12 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
-
+import reportWebVitals from './components/reportWebVitals';
+import {FetchGitHubRepo} from './components/FetchGitHubRepo';
+import {Aggrid} from './components/Aggrid'
+import {OuterContainer} from './components/MaterialUISample/OuterContainer'
+import {SearchableDropDown} from './components/SearchableDropDown';
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <SearchableDropDown />
   </React.StrictMode>,
   document.getElementById('root')
 );
