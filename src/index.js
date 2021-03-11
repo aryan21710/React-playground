@@ -7,10 +7,10 @@ import {Aggrid} from './components/Aggrid'
 import {OuterContainer} from './components/MaterialUISample/OuterContainer'
 import {SearchableDropDown1} from './components/SearchableDropDown1';
 import {SearchableDropDown2} from './components/SearchableDropDown2';
-
+import {AutoPopulateEmailWhenTyped} from './components/AutoPopulateEmailWhenTyped'
 ReactDOM.render(
   <React.StrictMode>
-    <SearchableDropDown2 />
+    <AutoPopulateEmailWhenTyped />
   </React.StrictMode>,
   document.getElementById('root')
 );

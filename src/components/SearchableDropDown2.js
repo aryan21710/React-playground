@@ -28,7 +28,7 @@ export const SearchableDropDown2 = () => {
 	const onSearchHandler = e => setSearchText(e.target.value.trim());
 	return (
 		<div style={styles.mainContainer}>
-			<input value={searchText} onChange={onSearchHandler} style={styles.search} placeholder="search" />
+			<input type="search" value={searchText} onChange={onSearchHandler} style={styles.search} placeholder="search" />
 			<div style={styles.dropdownContainer}>
 				{dropdownOptions.map((_, idx) =>
 					<span style={styles.dropdownOptions} data-myoptions={_} value={_}>
