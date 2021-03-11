@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import { InputBase, Grid, Button, withStyles, Card, Paper, Table, TableBody, TableCell, TableRow  } from '@material-ui/core';
+import React, { useState } from 'react';
+import { InputBase, Grid, Card, Paper, Table, TableBody, TableCell, TableRow  } from '@material-ui/core';
 import classnames from 'classnames';
 import { makeStyles } from '@material-ui/core/styles';
 import _ from 'lodash';
@@ -42,7 +42,7 @@ export const AutoPopulateEmailWhenTyped = () => {
         console.log('returnedFilteredEmployees', returnedFilteredEmployees);
 
         setInputValue(value);
-        setFilteredEmployees([ ...filteredEmployees, ...returnedFilteredEmployees ]);
+        returnedFilteredEmployees ? setFilteredEmployees([ ...returnedFilteredEmployees ]) : setFilteredEmployees([...filteredEmployees]);
 
     };
 
@@ -50,6 +50,7 @@ export const AutoPopulateEmailWhenTyped = () => {
         const givenEmails = value.split(',');
         let stringToSearch = givenEmails[givenEmails.length - 1];
         let filteredEmployees = [];
+        console.log('stringToSearch',stringToSearch)
         if (stringToSearch.length > 0) {
             filteredEmployees = employeeData.filter(employee => {
                 if (_.startsWith(employee.preferredName.toLowerCase(), stringToSearch.toLowerCase()))
