@@ -10,7 +10,7 @@ import {SearchableDropDown2} from './components/SearchableDropDown2';
 import {AutoPopulateEmailWhenTyped} from './components/AutoPopulateEmailWhenTyped'
 ReactDOM.render(
   <React.StrictMode>
-    <AutoPopulateEmailWhenTyped />
+    <Aggrid />
   </React.StrictMode>,
   document.getElementById('root')
 );
